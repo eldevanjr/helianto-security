@@ -130,7 +130,7 @@ public class UserDetailsAdapter
      * Identity id.
      */
     public int getIdentityId() {
-    	if (user!=null) {
+    	if (user!=null && user.getIdentityId()!=null) {
     		return user.getIdentityId();
     	}
     	if(userReadAdapter!=null ){
