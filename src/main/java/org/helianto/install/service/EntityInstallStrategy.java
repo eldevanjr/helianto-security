@@ -3,6 +3,7 @@ package org.helianto.install.service;
 import java.util.List;
 
 import org.helianto.core.domain.Entity;
+import org.helianto.core.domain.Identity;
 import org.helianto.core.domain.Operator;
 
 /**
@@ -27,5 +28,14 @@ public interface EntityInstallStrategy {
 	 * @param entityName
 	 */
 	Entity installEntity(Operator context, Entity prototype);
+	
+	void createEntities(Operator context, List<Entity> prototypes, Identity identity);
+	
+	/**
+	 * Remove lead.
+	 * 
+	 * @param leadPrincipal
+	 */
+	String removeLead(String leadPrincipal);
 
 }
